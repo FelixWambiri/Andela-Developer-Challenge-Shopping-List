@@ -1,0 +1,5 @@
+#ignores all the files you dont want to commit to github
+
+.idea/
+__pycache__/
+shopping_venv/

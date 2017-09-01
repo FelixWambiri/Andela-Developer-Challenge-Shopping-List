@@ -1,20 +1,8 @@
 language: python
- - "3.6"
+python:
+  - "3.6"
 
-script:
- - tests/run_travis.sh
-
-before_install:
- - chmod +x tests/run_travis.sh
-
-# whitelist
-branches:
-  only:
-    - master
-
-#dependacies and libraries to install
-install: pip install -r requirements.txt
-
-after_success:
-  - coveralls
-  
+# command to install dependencies
+install: "pip install -r requirements.txt"
+# command to run tests
+script: nosetests
